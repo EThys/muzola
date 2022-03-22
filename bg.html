@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>OBJECTIF QATAR</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+	<style>
+	@import url('fonts.css');
+		*{
+			margin: 0;
+			padding: 0;
+			font-family: "Livvic";
+		}
+		section{
+			position: relative;
+			width: 100%;
+			height: 100vh;
+			background-color: #333;
+		}
+		section h2{
+			position: relative;
+			width: 100%;
+			height: 80%;
+			text-align: center;
+			line-height: 580px;
+			color: #fff;
+			font-size: 40px;
+			font-weight: 700;
+			
+
+		}
+		section p{
+		    color:#fff;
+		    margin-top: -200px;
+		    text-align: center;
+		    padding-left: 10px;
+		    padding-right: 10px;
+		    line-height: 30px;
+		    animation:para 2s ease-in-out forwards;;
+		   
+		}
+		section .l{
+		    margin-right: 6px;
+		}
+		section span{
+		    animation: bounce 0.3s ease-in-out infinite alternate;
+		    display: inline-block;
+		    position: relative;
+		}
+		.banner{
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			display: flex;
+			flex-wrap: wrap;
+			overflow: hidden;
+
+		}
+		.banner .blocks{
+			position: relative;
+			display: block;
+			width: 100px;
+			height: 100px;
+			animation: animate 0.75s ease-in-out forwards;
+		}
+		.banner .blocks:nth-child(even){
+			animation: animate 1s ease-in-out forwards;
+		}
+		.banner .blocks:nth-child(7n+3){
+			animation: animate 2.5s ease-in-out forwards;
+		}
+		.banner .blocks:nth-child(7n+7){
+			animation: animate 1.5s ease-in-out forwards;
+		}
+		
+		@keyframes animate{
+			0%{
+				opacity: 0;
+				transform: scale(0) translateY(1000px);
+			}
+			50%{
+				opacity: 1;
+				background-image: url('images/pard.jpeg');
+				background-position: center;
+				background-attachment: fixed;
+				background-size:contain;
+			}
+			100%{
+				opacity: 1;
+				transform: scale(1) translateY(0px);
+				background-image: url('images/pard.jpeg');
+				background-position: center;
+				background-attachment: fixed;
+				background-size:contain;
+			}
+		}
+		@keyframes para{
+		    0%{
+		        opacity: 0;
+		        transform: scale(0) translateZ(1000px);
+		    }
+		    100%{
+		        opacity: 1;
+                transform: scale(1) translateZ(0);
+		    }
+		}
+        @keyframes bounce{
+			0%{
+				top: -6px;
+
+			}
+			50%{
+				top: -10px;
+			}
+			100%{
+				top: -15px;
+			}
+		}
+	section p span:nth-child(1){animation-delay: 0.2s;}
+
+	section p span:nth-child(2){animation-delay: 0.3s;}
+
+	section p span:nth-child(3){animation-delay: 0.4s;}
+	section p span:nth-child(4){animation-delay: 0.6s;}
+	section p span:nth-child(5){animation-delay: 0.8s;}
+	section p span:nth-child(6){animation-delay: 1s;}
+	section p span:nth-child(7){animation-delay: 1.3s;}
+	section p span:nth-child(8){animation-delay: 1.6s;}
+	section p span:nth-child(9){animation-delay: 1.8s;}
+	section p span:nth-child(10){animation-delay:2s;}
+	section p span:nth-child(11){animation-delay:2.5s;}
+	section p span:nth-child(12){animation-delay: 2.9s;}
+	section p span:nth-child(13){animation-delay: 3.3s;}
+	section p span:nth-child(14){animation-delay: 3.6s;}
+	section p span:nth-child(15){animation-delay:3.9s;
+	s
+	}
+		
+		@media (max-width: 480px){
+			.banner .blocks{
+				width: 45px;
+				height: 45px;
+			}
+			section p{
+			    font-size:19px;
+			    font-weight: 700;
+			   
+			}
+		}
+	</style>
+</head>
+<body>
+	<section>
+		<h2>DIRECTION QATAR</h2>
+		<p>Tu n'aimes pas le foot ? pas grave.</br>Deux dates, pour vos agenda. Ce 25 mars et le 29 mars.</br>COMME UN SEUL HOMME TOUS DERRIERE NOS LEOPARDS</br></br>
+		<span>O</span>
+		<span>P</span>
+		<span>E</span>
+		<span>R</span>
+		<span>A</span>
+		<span>T</span>
+		<span>I</span>
+		<span>O</span>
+		<span class="l">N</span>
+		<span>F</span>
+		<span>I</span>
+        <span>M</span>
+        <span>B</span>
+        <span>U</span>
+        
+	
+		</p>
+		<div class="banner">
+			<div class="blocks"></div>
+			
+		</div>
+		
+	</section>
+</body>
+<script type="text/javascript">
+	let banner= document.getElementsByClassName('banner')[0];
+	let block= document.getElementsByClassName('blocks');
+	let duration=true;
+
+	
+	    for(var i = 0; i < 400; i++){
+		banner.innerHTML+="<div class='blocks'></div>";
+		block[i].style.animationDelay=`${i * 0.08}s`;
+    	}
+    	
+</script>
+</html>
